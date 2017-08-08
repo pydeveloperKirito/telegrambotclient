@@ -23,7 +23,7 @@ def handle(msg):
         print ("dall'utente: ", nome)
         print ("dall'username: ", user)
 
-bot = telepot.Bot('281498318:AAE1AX4hER0VswacWh0oe9K_YsGBFLk5tfc')
+bot = telepot.Bot('inserisci qui il tuo token')
 
 MessageLoop(bot, handle).run_as_thread()
 while 1:
