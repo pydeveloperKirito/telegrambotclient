@@ -10,7 +10,6 @@ import telepot
 from telepot.loop import MessageLoop
 import subprocess
 import sys
-subprocess.check_call([sys.executable, 'notifier.py'])
 bot = telepot.Bot('inserisci il tuo token qui')
 def message ():
     testo = input("cosa vuoi inviare?: ")
