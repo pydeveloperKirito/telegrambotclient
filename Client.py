@@ -8,6 +8,9 @@ from telepot.namedtuple import InlineKeyboardMarkup, InlineKeyboardButton
 from telepot.namedtuple import InlineQueryResultArticle, InlineQueryResultPhoto, InputTextMessageContent
 import telepot
 from telepot.loop import MessageLoop
+import subprocess
+import sys
+subprocess.check_call([sys.executable, 'notifier.py'])
 bot = telepot.Bot('inserisci il tuo token qui')
 def message ():
     testo = input("cosa vuoi inviare?: ")
@@ -22,10 +25,8 @@ choice ()
 scelta = input ("cosa vuoi fare?: ")
 if scelta == "text":
     message ()
-    choice()
-    scelta = input()
-    if scelta == "ciao123":
-       scelta = input()
+elif scelta == "ciao123":
+    exit()
 elif scelta == "button":
     testobottone = input("digita il testo del bottone: ")
     urlbottone = input("digita l'url del bottone: ")
@@ -34,5 +35,3 @@ elif scelta == "button":
     [dict(text= testobottone, url=urlbottone)]
     ])
     bot.sendMessage(chat,testo,reply_markup=markup )
-    choice ()
-    scelta = input()
